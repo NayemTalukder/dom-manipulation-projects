@@ -215,11 +215,8 @@ const orderWithinText = orderWithin.querySelector('.desktop-countdown p')
 orderWithinText.innerHTML = 'In Stock -' + orderWithinText.innerHTML 
 colBasElement.appendChild(orderWithin)
 
-// Adjust timer
-const countdown = document.querySelector('.product-countdown-wrapper')
-const d = new Date()
-let day = d.getDay()
-if (day == 5 || day == 6 || day == 0) countdown.classList.add('hidden')
+// timer Adjusted below before Adding Additional Style Sheet
+
 // [End] <> [Upper Section] => {Right Part} --> Adjust In Stock - Order Within Part
 
 // [Start] <> [Upper Section] => {Right Part} --> Adjust Buy Now Button
@@ -400,6 +397,13 @@ document.addEventListener('mouseover', () => {
 window.scrollTo(0, 0);
 // [End] <> [Lower Section]
 
+// [Start] <> [Additional Adjustment]
+// [Upper Section] => {Right Part} --> Adjust In Stock - Order Within Part -> Adjust timer
+const countdown = document.querySelector('.product-countdown-wrapper')
+const d = new Date()
+let day = d.getDay()
+if (day == 5 || day == 6 || day == 0) countdown.classList.add('hidden')
+// [End] <> [Additional Adjustment]
 
 // [Start] <> Add Additional Style Sheet
 var style = document.createElement('style');
